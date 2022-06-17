@@ -8,6 +8,6 @@ public class MyCondition implements Condition {
 
     @Override
     public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata) {
-        return true;
+        return false;
     }
 }
