@@ -9,7 +9,12 @@ import org.springframework.context.annotation.Configuration;
 public class AppConfig {
 
     @Bean
-    public String doSomething(){
+    public String aString(){
         return "IJSE";
     }
+
+//    @Bean
+//    public Integer anInt(){
+//        return 10;
+//    }
 }
