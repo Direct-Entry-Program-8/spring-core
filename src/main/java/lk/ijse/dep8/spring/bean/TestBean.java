@@ -9,7 +9,7 @@ import javax.annotation.PostConstruct;
 import java.util.Arrays;
 
 
-@Component
+//@Component
 public class TestBean {
 
     @Value("ijse")
