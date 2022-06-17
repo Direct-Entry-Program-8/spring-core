@@ -1,11 +1,9 @@
-package lk.ijse.dep8.spring;
+package org.hibernate;
 
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration
 @ComponentScan
-public class AppConfig {
-
+@Configuration
+public class HibernateConfig {
 }
