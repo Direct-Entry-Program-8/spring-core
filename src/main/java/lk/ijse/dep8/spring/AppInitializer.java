@@ -7,9 +7,9 @@ public class AppInitializer {
 
     public static void main(String[] args) {
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
-        ctx.register(AppConfig.class);
-        ctx.register(HibernateConfig.class);
-        ctx.register(XMLConfig.class);
+        ctx.register(RootConfig.class);
+//        ctx.register(HibernateConfig.class);
+//        ctx.register(XMLConfig.class);
         ctx.refresh();
         ctx.registerShutdownHook();
     }
