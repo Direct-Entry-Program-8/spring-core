@@ -4,8 +4,10 @@ import lk.ijse.dep8.spring.util.FrenchKiss;
 import lk.ijse.dep8.spring.util.Wayasai;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Primary;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
+@Order(4)
 @FrenchKiss
 @Wayasai
 @Primary

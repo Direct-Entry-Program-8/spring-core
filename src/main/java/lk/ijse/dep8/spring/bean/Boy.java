@@ -7,6 +7,9 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 @Component("lahiru")
 public class Boy {
@@ -15,15 +18,32 @@ public class Boy {
     @Wayasai
     @Qualifier("kondea-diga")
     @Autowired
-    private GoodGirl gf;
+    private GoodGirl primaryGf;
+
+    @Autowired
+    private List<GoodGirl> goodGirls;
+
+    @Autowired
+    private Set<GoodGirl> goodGirlSet;
+
+    @Autowired
+    private Map<String, GoodGirl> goodGirlMap;
 
     public Boy() {
-        System.out.println(gf);
+        System.out.println(primaryGf);
     }
 
     @PostConstruct
     public void init() {
-        System.out.println(gf);
-        gf.kiss();
+        System.out.println(primaryGf);
+        primaryGf.kiss();
+
+        goodGirls.forEach(System.out::println);
+        System.out.println("----------------");
+        goodGirlSet.forEach(System.out::println);
+        System.out.println("-----------------");
+        for (String key : goodGirlMap.keySet()) {
+            System.out.printf("%s:%s\n", key, goodGirlMap.get(key));
+        }
     }
 }
