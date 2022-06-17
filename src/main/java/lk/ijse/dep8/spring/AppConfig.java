@@ -13,8 +13,8 @@ public class AppConfig {
         return "IJSE";
     }
 
-//    @Bean
-//    public Integer anInt(){
-//        return 10;
-//    }
+    @Bean
+    public Integer anInt(){
+        return 10;
+    }
 }

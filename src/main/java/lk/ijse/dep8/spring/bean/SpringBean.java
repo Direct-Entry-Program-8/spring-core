@@ -5,22 +5,28 @@ import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
+import java.sql.Connection;
+import java.util.Calendar;
 
 @Component
 public class SpringBean {
 
-
-    public SpringBean(String something, @Autowired(required = false) Integer i) {
-        System.out.println("SpringBean() " + something + " " + i);
+    @Autowired(required = false)
+    public SpringBean(Calendar c){
+        System.out.println("SpringBean(Integer,String)");
     }
 
-//    @Autowired
-//    public void doSomething(@Autowired(required = false) Integer something){
-//        System.out.println(something);
-//    }
+    @Autowired(required = false)
+    public SpringBean(Connection c){
+        System.out.println("SpringBean(Connection)");
+    }
+
+    public SpringBean() {
+        System.out.println("SpringBean()");
+    }
 
     @PostConstruct
-    public void init(){
+    public void init() {
         System.out.println("SpringBean: Init() method");
     }
 }
